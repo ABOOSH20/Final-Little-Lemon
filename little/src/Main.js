@@ -1,7 +1,14 @@
+import { Routes, Route } from 'react-router-dom';
+import Homepage from './Homepage';
+import BookingPage from './BookingPage';
+
 function Main() {
   return (
     <main>
-      <p>Main content goes here.</p>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/booking" element={<BookingPage />} />
+      </Routes>
     </main>
   );
 }

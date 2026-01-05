@@ -3,7 +3,7 @@ import logo from './assets/little-lemon-logo.png';
 function Footer() {
   return (
     <footer>
-      <img src={logo} alt="Little Lemon logo" />
+      <img src={logo} alt="Little Lemon logo" className='footer-logo' />
 
       <section>
         <h4>Navigation</h4>

@@ -1,38 +1,247 @@
-.App {
-  text-align: center;
+/* Reset default browser spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Page layout */
+body {
+  font-family: Arial, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header,
+nav,
+main,
+footer {
+  padding: 16px;
 }
 
-.App-header {
-  background-color: #282c34;
+/* Grid layout */
+#root {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
   min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-logo {
+  width: 200px;   /* larger than footer logo */
+  height: auto;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  font-size: 1rem;
+}
+
+nav {
+  background-color: #495e57;
+  padding: 12px 0;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+
+/* Main content */
+main {
+  padding: 32px;
+}
+
+/* Footer */
+footer {
+  background-color: #495e57;
+  color: white;
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+}
+
+.footer-logo {
+  width: 80px;        /* adjust size as needed */
+  height: auto;       /* keeps proportions */
+}
+
+footer img {             /* center the logo */
+  display: block;
+  margin: 0 auto;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333333;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Arial', sans-serif;
+  color: #495e57;
+  margin-bottom: 16px;
+}
+
+/* Individual heading sizes */
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+span {
+  color: #f4ce14;
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  background-color: var(--primary-green);
+  color: white;
+  padding: 3rem 6rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: var(--primary-yellow);
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 400px;
+}
+
+.hero button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-yellow);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.specials {
+  padding: 4rem 6rem;
+}
+
+.specials h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.specials article {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 0.5rem;
+  background-color: var(--highlight-gray);
+  border-radius: 12px;
+  padding: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.specials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.testimonials {
+  background-color: var(--highlight-gray);
+  padding: 4rem 6rem;
+}
+
+.testimonials article {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 250px;
+}
+
+.testimonials {
+  display: flex;
+  gap: 2rem;
+}
+
+.about {
+  padding: 4rem 6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.about img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+  .hero,
+  .about {
+    grid-template-columns: 1fr;
   }
-  to {
-    transform: rotate(360deg);
+
+  .specials {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials {
+    flex-direction: column;
   }
 }
